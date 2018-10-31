@@ -13,8 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
+// create a user
 Route::post('user', 'UserController@store');
+
+// create or update a subscription for a user
+Route::post('subscription', 'SubscriptionController@store');
+
+// delete a subscription for a user
+Route::post('subscription/delete', 'SubscriptionController@destroy');
