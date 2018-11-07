@@ -21,3 +21,7 @@ Route::post('subscription', 'SubscriptionController@store');
 
 // delete a subscription for a user
 Route::post('subscription/delete', 'SubscriptionController@destroy');
+
+// create push notification
+Route::post('notify', 'NotificationController@notify');
+
