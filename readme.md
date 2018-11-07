@@ -1,4 +1,4 @@
-#Project description
+# Project description
 This repository contains a Laravel installation that is only used as an API backend for
 a Vue PWA we are developing in a blog series. You can read more on our [blog](https://www.blog.plint-sites.nl)
 or on [Medium](https://medium.com/plint-sites).
