@@ -26,7 +26,7 @@ class SubscriptionController extends Controller
     public function store(Request $request)
     {
         // get user from request
-        $user = User::findOrFail($request->user);
+        $user = User::findOrFail($request->userId);
 
         // create PushSubscription and connect to this user
         $pushsub = $user->updatePushSubscription($request->subscription['endpoint'], $request->subscription['keys']['p256dh'], $request->subscription['keys']['auth']);
