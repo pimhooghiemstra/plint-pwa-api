@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 // create a user
-Route::post('user', 'UserController@store');
+Route::post('user', 'UserController@createOrRetrieve');
 
 // create or update a subscription for a user
 Route::post('subscription', 'SubscriptionController@store');

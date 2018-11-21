@@ -10,10 +10,12 @@ use App\User;
 class UserController extends Controller
 {
     /**
-     * Create a new user with a random name and return it
+     * If the request contains a username, retrieve this user from
+     * the database and return it.
+     * Otherwise, create a new user with a random name and return it.
      * @return new user object as json
      */
-    public function store(Request $request)
+    public function createOrRetrieve(Request $request)
     {
         if ($request->has('username') && !is_null($request->username)) {
             $user = User::where(['name' => $request->username])->first();
