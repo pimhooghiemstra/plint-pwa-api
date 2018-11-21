@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\User;
 
@@ -19,7 +20,7 @@ class UserController extends Controller
         } else {
             // create a new user instance.
             // name of the user is just a hashed string
-            $user = User::create(['name' => str_random(20)]);
+            $user = User::create(['name' => Str::uuid()]);
         }
 
         return response()->json(compact('user'));
