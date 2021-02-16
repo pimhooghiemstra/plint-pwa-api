@@ -5,7 +5,7 @@ or on [Medium](https://medium.com/plint-sites).
 
 The sample app we have built uses the [Webpush notification channel package](https://github.com/laravel-notification-channels/webpush). This needs some setup and configuration.
 
-# What we build
+# What we've built
 
 ![This is what we build in the current version](https://www.blog.plint-sites.nl/wordpress/wp-content/uploads/2018/11/notify-with-push.png)
 
