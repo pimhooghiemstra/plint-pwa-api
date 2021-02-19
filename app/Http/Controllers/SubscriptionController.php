@@ -48,9 +48,12 @@ class SubscriptionController extends Controller
         // This will return the PushSubscription model instance corresponding to the given endpoint.
         // We than retrieve the user instance from the belongsTo relation also defined in the PushSubscription model
         // Note that we did add the use statement with correct namespace on top of this file.
-        $user = PushSubscription::findByEndpoint($request->endpoint)->user;
+        // $user = PushSubscription::findByEndpoint($request->endpoint)->user;
+        $user = User::findOrFail($request->userId);
 
-        $user->deletePushSubscription($request->endpoint);
+        if ($user) {
+            $user->deletePushSubscription($request->endpoint);
+        }
 
         return response()->json(null, 204);
     }
