@@ -1,3 +1,5 @@
+# Update March 2022
+This repository is abandoned. In the future, we may create a new version with more modern technology.
 # Project description
 This repository contains the Laravel API for
 our [Vue PWA](https://github.com/pimhooghiemstra/plintpwa-vue-1) developed in the blog series. You can read more on our [blog](https://www.blog.plint-sites.nl)
